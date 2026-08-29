@@ -36,7 +36,8 @@ app.get("/", (req, res) => {
 const validateListing = (req, res, next) => {
   let { error } = listingSchema.validate(req.body);
   if (error) {
-    throw new ExpressError(400, error);
+    let errMsg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(400, errMsg);
   } else {
     next();
   }
@@ -72,6 +73,7 @@ app.post(
   validateListing,
   wrapAsync(async (req, res, next) => {
     const newListing = new Listing(req.body.listing);
+
     await newListing.save();
     res.redirect("/listings");
   }),
@@ -129,6 +131,7 @@ app.all("/*splat", (req, res, next) => {
 app.use((err, req, res, next) => {
   let { statusCode = 500, message = "Something went wrong" } = err;
   res.status(statusCode).render("error.ejs", { message });
+  // res.render("error.ejs", { message });
   //   res.status(statusCode).send(message);
 });
 
