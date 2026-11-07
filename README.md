@@ -71,9 +71,6 @@ Wandora follows a structured MVC-inspired architecture to keep application logic
 
 Additional files handle application configuration, middleware, validation schemas, and cloud services.
 
-## 📸 Application Preview
-
-_Add screenshots of different sections of Wandora here._
 
 ## 🎯 Project Highlights
 
