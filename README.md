@@ -1,8 +1,8 @@
-<img width="1911" height="868" alt="image" src="https://github.com/user-attachments/assets/140fda34-a98e-41eb-9833-97ca5321130c" /># 🌍 Wandora
+# 🌍 Wandora
 
 
 <p align="center">
-  <img src="./screenshots/wandora-preview.png" alt="Wandora Website Preview" width="100%">
+  <img width="1911" height="868" alt="image" src="https://github.com/user-attachments/assets/140fda34-a98e-41eb-9833-97ca5321130c" />
 </p>
 
 <p align="center">
